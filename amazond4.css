@@ -1,0 +1,170 @@
+body {
+    background-color: #BAB5B0;
+}
+
+.bg-dark {
+    color: #eaeded;
+    background-color: #222f3e;
+    width: 100%;
+}
+
+.bg-dark-light {
+    color: #eaeded;
+    background-color: #364759;
+    width: 100%;
+}
+
+span {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.bg-yellow {
+    color: #eaeded;
+    background-color: #f56600;
+
+}
+
+.text-center {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+.py-1 {
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+}
+
+.py-2 {
+    margin: 1rem 1rem;
+}
+
+.bg-image1 {
+    background-image: url(./assets-6/assets/bg-image.png);
+    background-size: contain
+}
+
+.bg-color-white {
+    background-color: #eaeded;
+    width: auto;
+}
+
+.text-center-bold {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    color: #eaeded;
+}
+
+.text-center-white {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    color: #eaeded;
+}
+
+.text-fontfamily {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-fontfamily-bold {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.div-2 {
+    margin: 1rem 1rem;
+    padding: 0.25rem 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-img {
+    display: inline-block;
+}
+
+.img-style1 {
+    width: 350px;
+    height: 400px;
+    border-radius: 15px;
+
+}
+
+.img-style2 {
+    width: 100%;
+}
+
+.container-box
+{background-color:white;
+width: 350px;
+height: 400px;
+display: inline-block;
+margin: 0.2rem 0.2rem;
+position: relative;
+overflow: hidden;
+}
+
+.child-1 {
+        position: absolute;
+        top: 0%;
+        left: 25%;
+        right: 20%;
+}
+
+.child-2 {
+    position: absolute;
+    top: 10%;
+    left:5%;
+    z-index: 1;
+}
+
+.child-3 {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 1;
+    
+}
+        
+
+.child-4 {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+   z-index: 1;
+        
+}
+
+.child-5 {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    z-index: 1;
+       
+}
+
+.child-6 {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    right: 0%;
+    z-index: 1;
+       
+}
+
+.image-child {
+    width: 140px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.p-box {z-index: 2;
+margin: 1px;}
