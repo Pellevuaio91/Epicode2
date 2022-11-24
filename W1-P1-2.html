@@ -1,0 +1,412 @@
+<<!-- I selettori CSS ti aiutano a selezionare elementi HTML tramite CSS e JavaScript.
+Con questi esercizi farai pratica nell'utilizzarli sia per modificare lo stile di elementi HTML sia nel selezionarli per manipolarli via JavaScript
+I selettori CSS sono estremamente utili per selezionare nodi del DOM con precisione grazie al fatto che funzionano perfettamente con querySelector,
+senza necessità di scrivere algoritmi più complessi per arrivare allo stesso risultato.
+IMPORTANTE: NON PUOI inserire classi o id aggiuntivi nell'HTML, devi usare solo quello che già c'è. Non puoi cambiare la struttura in nessuna maniera. L'obiettivo è quello di usare Selettori e Combinatori per arrivare a selezionare l'elemento di interesse per poi manipolarlo nello stile o nella struttura con JS.
+Per testare i Selettori CSS puoi cambiare all'elemento che stai cercando di selezionare il colore, colore di sfondo, aggiungere un bordo colorato ecc. Se il selettore è corretto vedrai applicare quello stile all'elemento, se non succede significa che il selettore non è corretto o qualche altra regola CSS sta prevalendo. Controlla sempre dall'inspector del browser.
+ESERCIZIO 1) Crea un selettore per selezionare l'<h1> nella sezione "hero", ovvero nel jumbotron
+    .jumbotron h1
+ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento navbar
+    .nav *
+ESERCIZIO 3) Crea un selettore per selezionare il link "Continua a leggere" del jumbotron
+    .jumbotron a
+ESERCIZIO 4) Crea un selettore per selezionare il primo blog post
+    .jumbotron
+ESERCIZIO 5) Crea un selettore per selezionare l'<hr> del primo blog post e colorarlo di rosso
+   .blog href { border-color:red };
+ESERCIZIO 6) Crea un selettore per selezionare i link pari della navbar
+     nav:nth-child(odd){ }
+ESERCIZIO 7) Crea un selettore per selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio")
+    .p-4:nth-child(2) > ol > li > a
+ESERCIZIO 8) Crea un selettore per selezionare l'autore del secondo blog post
+body > main > div > div > div:nth-child(3) > p.blog-post-meta > a
+ESERCIZIO 9) Crea un selettore per selezionare il secondo <li> della lista del terzo blog post
+.blog-post > ul > :nth-child(2
+ESERCIZIO 10) Crea un selettore per selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra
+a.float-right
+ESERCIZIO 11) Crea un selettore per selezionare il bottone "Nuovi" che trovi in basso
+nav.blog-pagination > a.btn.btn-outline-secondary.disabled
+ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
+.blog-footer > p > a:nth-child(2)
+...scorri in fondo fino allo <script> per trovare gli esercizi di JavaScript
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <style>
+
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
+    <meta name="generator" content="Jekyll v3.8.5" />
+    <title>Template di un blog · Bootstrap</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/" />
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        .col ~ a{
+            color: red;
+        }
+       
+        
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    <a class="text-muted" href="#">Resta aggiornato</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="blog-header-logo text-dark" href="#">Grande</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="text-muted" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+                            viewBox="0 0 24 24" focusable="false">
+                            <title>Cerca</title>
+                            <circle cx="10.5" cy="10.5" r="7.5" />
+                            <path d="M21 21l-5.2-5.2" />
+                        </svg>
+                    </a>
+                    <a class="btn btn-sm btn-outline-secondary" href="#">Iscriviti</a>
+                </div>
+            </div>
+        </header>
+
+        <nav class="nav d-flex justify-content-between mb-2">
+            <span>Esteri</span>
+            <span>Arte</span>
+            <span>Tecnologia</span>
+            <span>Design</span>
+            <span>Cultura</span>
+            <span>Business</span>
+            <span>Politica</span>
+            <span>Opinioni</span>
+            <span>Scienza</span>
+            <span>Salute</span>
+            <span>Stile</span>
+            <span>Viaggi</span>
+        </nav>
+
+        <div class="jumbotron p-4 p-md-5 rounded ">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 font-italic">
+                    Titolo lungo del post di apertura
+                </h1>
+                <p class="lead my-3">
+                    Blocco di testo che forma le prime righe dell'attacco del post.
+                    L’attacco è l’aggancio del post, la parte più importante e che ti permette di catturare l’attenzione
+                    del lettore. Devi riassumere le informazioni decisive per far capire subito l’argomento.
+                </p>
+                <p class="lead mb-0">
+                    <a href="#" class="font-weight-bold">Continua a leggere...</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Esteri</strong>
+                        <h3 class="mb-0">Post in primo piano</h3>
+                        <div class="mb-1 text-muted">Nov 21</div>
+                        <p class="card-text mb-auto">
+                            Questo è un elemento più grande che supporta il testo sottostante come naturale introduzione
+                            all'informazione successiva.
+                        </p>
+                        <a href="#" class="stretched-link">Continua a leggere</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                            aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Miniatura</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Esteri</strong>
+                        <h3 class="mb-0">Post in primo piano</h3>
+                        <div class="mb-1 text-muted">Nov 21</div>
+                        <p class="card-text mb-auto">
+                            Questo è un elemento più grande che supporta il testo sottostante come naturale introduzione
+                            all'informazione successiva.
+                        </p>
+                        <a href="#" class="stretched-link">Continua a leggere</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                            aria-label="Placeholder: Thumbnail">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Miniatura</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-8 blog-main">
+                <h3 class="pb-4 mb-4 font-italic border-bottom">From the Firehose</h3>
+
+                <div class="blog-post">
+                    <h2 class="blog-post-title">Esempio di blog post</h2>
+                    <p class="blog-post-meta">
+                        1 gennaio 2020 di <a href="#">Marco</a>
+                    </p>
+
+                    <p>
+                        Questo post mostra alcune diversi tipi di contenuto che è realizzato e stilizzato tramite
+                        Bootstrap. Tipografia, immagini e codice sono perfettamente supportati.
+                    </p>
+                    <hr />
+                    <p>
+                        Cum sociis natoque penatibus et magnis
+                        <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
+                        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+                        vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
+                        consectetur purus sit amet fermentum.
+                    </p>
+                    <blockquote>
+                        <p>
+                            Curabitur blandit tempus porttitor.
+                            <strong>Nullam quis risus eget urna mollis</strong> ornare vel
+                            eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                        </p>
+                    </blockquote>
+                    <p>
+                        Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras
+                        mattis consectetur purus sit amet fermentum. Aenean lacinia
+                        bibendum nulla sed consectetur.
+                    </p>
+                    <h2>Heading</h2>
+                    <p>
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                        auctor. Duis mollis, est non commodo luctus, nisi erat porttitor
+                        ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac
+                        consectetur ac, vestibulum at eros.
+                    </p>
+                    <h3>Sub-heading</h3>
+                    <p>
+                        Cum sociis natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus.
+                    </p>
+                    <pre><code>Example code block</code></pre>
+                    <p>
+                        Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem
+                        malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus
+                        commodo, tortor mauris condimentum nibh, ut fermentum massa.
+                    </p>
+                    <h3>Sub-heading</h3>
+                    <p>
+                        Cum sociis natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
+                        consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
+                        dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+                        ut fermentum massa justo sit amet risus.
+                    </p>
+                    <ul>
+                        <li>
+                            Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                            et.
+                        </li>
+                        <li>Donec id elit non mi porta gravida at eget metus.</li>
+                        <li>Nulla vitae elit libero, a pharetra augue.</li>
+                    </ul>
+                    <p>
+                        Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae
+                        elit libero, a pharetra augue.
+                    </p>
+                    <ol>
+                        <li>Vestibulum id ligula porta felis euismod semper.</li>
+                        <li>
+                            Cum sociis natoque penatibus et magnis dis parturient montes,
+                            nascetur ridiculus mus.
+                        </li>
+                        <li>
+                            Maecenas sed diam eget risus varius blandit sit amet non magna.
+                        </li>
+                    </ol>
+                    <p>
+                        Cras mattis consectetur purus sit amet fermentum. Sed posuere
+                        consectetur est at lobortis.
+                    </p>
+                </div>
+                <!-- /.blog-post -->
+
+                <div class="blog-post">
+                    <h2 class="blog-post-title">Ancora un blog post</h2>
+                    <p class="blog-post-meta">
+                        23 dicembre 2019 di <a href="#">Iacopo</a>
+                    </p>
+
+                    <p>
+                        Cum sociis natoque penatibus et magnis
+                        <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
+                        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+                        vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
+                        consectetur purus sit amet fermentum.
+                    </p>
+                    <blockquote>
+                        <p>
+                            Curabitur blandit tempus porttitor.
+                            <strong>Nullam quis risus eget urna mollis</strong> ornare vel
+                            eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                        </p>
+                    </blockquote>
+                    <p>
+                        Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras
+                        mattis consectetur purus sit amet fermentum. Aenean lacinia
+                        bibendum nulla sed consectetur.
+                    </p>
+                    <p>
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                        auctor. Duis mollis, est non commodo luctus, nisi erat porttitor
+                        ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac
+                        consectetur ac, vestibulum at eros.
+                    </p>
+                </div>
+                <!-- /.blog-post -->
+
+                <div class="blog-post">
+                    <h2 class="blog-post-title">Nuove funzionalità</h2>
+                    <p class="blog-post-meta">
+                        14 dicembre 2019 di <a href="#">Christian</a>
+                    </p>
+
+                    <p>
+                        Cum sociis natoque penatibus et magnis dis parturient montes,
+                        nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
+                        consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
+                        dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+                        ut fermentum massa justo sit amet risus.
+                    </p>
+                    <ul>
+                        <li>
+                            Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                            et.
+                        </li>
+                        <li>Donec id elit non mi porta gravida at eget metus.</li>
+                        <li>Nulla vitae elit libero, a pharetra augue.</li>
+                    </ul>
+                    <p>
+                        Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras
+                        mattis consectetur purus sit amet fermentum. Aenean lacinia
+                        bibendum nulla sed consectetur.
+                    </p>
+                    <p>
+                        Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae
+                        elit libero, a pharetra augue.
+                    </p>
+                </div>
+                <!-- /.blog-post -->
+
+                <nav class="blog-pagination">
+                    <a class="btn btn-outline-primary" href="#">Vecchi</a>
+                    <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Nuovi</a>
+                </nav>
+            </div>
+            <!-- /.blog-main -->
+
+            <aside class="col-md-4 blog-sidebar">
+                <div class="p-4 mb-3 bg-light rounded">
+                    <h4 class="font-italic">Glossario</h4>
+                    <p class="mb-0">
+                        Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras
+                        mattis consectetur purus sit amet fermentum. Aenean lacinia
+                        bibendum nulla sed consectetur.
+                    </p>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="font-italic">Archivio</h4>
+                    <ol class="list-unstyled mb-0">
+                        <li><a href="#">Marzo 2020</a></li>
+                        <li><a href="#">Febbraio 2020</a></li>
+                        <li><a href="#">Gennaio 2020</a></li>
+                        <li><a href="#">Dicembre 2019</a></li>
+                        <li><a href="#">Novembre 2019</a></li>
+                        <li><a href="#">Ottobre 2019</a></li>
+                        <li><a href="#">Settembre 2019</a></li>
+                        <li><a href="#">Agosto 2019</a></li>
+                        <li><a href="#">Luglio 2019</a></li>
+                        <li><a href="#">Giugno 2019</a></li>
+                        <li><a href="#">Maggio 2019</a></li>
+                        <li><a href="#">Aprile 2019</a></li>
+                    </ol>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="font-italic">Altro</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ol>
+                </div>
+            </aside>
+            <!-- /.blog-sidebar -->
+        </div>
+        <!-- /.row -->
+    </main>
+    <!-- /.container -->
+
+    <footer class="blog-footer">
+        <p class="text-center">
+            Blog creato per
+            <a href="https://getbootstrap.com/">Bootstrap</a> di
+            <a href="https://twitter.com/mdo">@mdo</a>.
+        </p>
+    </footer>
+
+    <a href="#" class="float-right mb-3 mr-3">Torna su</a>
+    <script>
+        /* JS Exercises should go here */
+
+        // EXTRA Crea con JavaScript la funzionalità per rimuovere il link "twitter" sotto alla sezione "Altro" nell'elemento "aside". Deve avvenire al caricamento della pagina, automticamente.
+        // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link "Continua a leggere".
+        // EXTRA Crea con JavaScript la funzionalità per creare un alert col nome dell'autore ogni volta che il cursore passa sopra l'autore del post.
+
+    </script>
+</body>
+
+</html>

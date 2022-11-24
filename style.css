@@ -1,0 +1,48 @@
+.jumbotron h1 {
+color: red;
+}
+
+.nav > span {
+    color: green;
+
+}
+
+.jumbotron a {
+    color: blueviolet;
+}
+
+.jumbotron {
+
+}
+
+.blog-post hr {
+    border-color: red;
+}
+
+.nav > span:nth-child(odd){
+    color: deeppink;
+}
+
+.p-4:nth-child(2) > ol > li > a{
+    color: aqua;
+}
+
+body > main > div > div > div:nth-child(3) > p.blog-post-meta > a {
+    color: red;
+}
+
+.blog-post > ul > :nth-child(2) {
+    color: red;
+}
+
+a.float-right {
+    color: red;
+}
+
+nav.blog-pagination > a.btn.btn-outline-secondary.disabled {
+    color: red;
+    background-color: green;
+}
+
+.blog-footer > p > a:nth-child(2) {color: red;}
+
